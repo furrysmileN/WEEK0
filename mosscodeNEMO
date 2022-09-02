@@ -1,0 +1,60 @@
+/*
+摩斯密码
+通过灯光闪烁表示摩斯密码NEMO
+N:长短；E：短；M：长长；O：长长长；
+*/
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+  
+}
+  int long_signal = 1000;
+  int short_signal = 100;
+  int delay_between_each_signal = 500;
+  int delay_between_each_letter = 2000;
+  int delay_of_whole_word = 5000;
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);   
+  delay(long_signal);                       
+  digitalWrite(LED_BUILTIN, LOW);    
+  delay(delay_between_each_signal); 
+  digitalWrite(LED_BUILTIN, HIGH);   
+  delay(short_signal);
+  digitalWrite(LED_BUILTIN, LOW); 
+  delay(delay_between_each_signal);
+  delay(delay_between_each_letter); // N
+  
+  digitalWrite(LED_BUILTIN, HIGH);   
+  delay(short_signal);
+  digitalWrite(LED_BUILTIN, LOW); 
+  delay(delay_between_each_signal);
+  delay(delay_between_each_letter); // E
+
+  digitalWrite(LED_BUILTIN, HIGH);   
+  delay(long_signal);                       
+  digitalWrite(LED_BUILTIN, LOW);    
+  delay(delay_between_each_signal);
+  digitalWrite(LED_BUILTIN, HIGH);   
+  delay(long_signal);                       
+  digitalWrite(LED_BUILTIN, LOW);    
+  delay(delay_between_each_signal);
+  delay(delay_between_each_letter); // M
+
+  digitalWrite(LED_BUILTIN, HIGH);   
+  delay(long_signal);                       
+  digitalWrite(LED_BUILTIN, LOW);    
+  delay(delay_between_each_signal);
+  digitalWrite(LED_BUILTIN, HIGH);   
+  delay(long_signal);                       
+  digitalWrite(LED_BUILTIN, LOW);    
+  delay(delay_between_each_signal);
+  digitalWrite(LED_BUILTIN, HIGH);   
+  delay(long_signal);                       
+  digitalWrite(LED_BUILTIN, LOW);    
+  delay(delay_between_each_signal);
+  delay(delay_between_each_letter); // O
+  delay(delay_of_whole_word);
+}
